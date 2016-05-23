@@ -37,7 +37,7 @@ const form = {
                 alert('请输入你的姓名');
                 return false;
             };
-            location.hash = `type=result&name=${info.name}&company=${info.company}&job=${info.job}`;
+            location.hash = encodeURIComponent(`type=result&name=${info.name}&company=${info.company}&job=${info.job}`);
         });
     },
     bind() {
@@ -115,7 +115,7 @@ const route = {
         });  
     },
     parse() {
-        let hash = location.hash;
+        let hash = decodeURIComponent(location.hash);
         let type = (hash.match(/type=(?:(\w+)&)?/) ? location.hash.match(/type=(?:(\w+)&)?/)[1] : 'form') || 'form';
         info.name = (hash.match(/name=(?:(\w+)&)?/) ? location.hash.match(/name=(?:([\w\u4e00-\u9fa5]+)&)?/)[1] : '') || '';
         info.company = (hash.match(/company=(?:(\w+)&)?/) ? location.hash.match(/company=(?:(\w+)&)?/)[1] : 0) || 0;
