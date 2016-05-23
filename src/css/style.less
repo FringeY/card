@@ -7,6 +7,7 @@ body {
     height: 100%;
     background: #fff url(../img/bg.png);
     font-size: 12px;
+    user-select: none;
 }
 
 [data-dpr="2"] body {
@@ -17,7 +18,7 @@ body {
         padding-left: 4px;
     } 
     .tip {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -29,7 +30,7 @@ body {
         padding-left: 4px;
     } 
     .tip {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -143,13 +144,18 @@ body {
         .px2rem(width, 566);
         .px2rem(margin-bottom, 70);
     }
-    .canvas {
-        .px2rem(width, 628);
-        .px2rem(height, 481);
-        padding: 11px;
+    #canvas-outer {
+        box-sizing: border-box;
+        .px2rem(width, 639);
+        .px2rem(height, 492);
+        padding: 10px 14px 14px 10px;
         margin: 0 auto;
         background: url(../img/border.png) no-repeat;
         background-size: contain;
+        #card {
+            width: 100%;
+            height: 100%;
+        }
     }
     .tip {
         display: inline-block;
