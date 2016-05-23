@@ -82,7 +82,10 @@ const result = {
         for (let key in images) {
             let image = new Image();
             image.src = images[key];
-        };          
+        };
+        this.init = function () {
+            return false;
+        };
     },
     render() {
         document.getElementById('result').style.display = 'block';
@@ -119,11 +122,11 @@ const route = {
         info.job = (hash.match(/job=(?:(\w+)&)?/) ? location.hash.match(/job=(?:(\w+)&)?/)[1] : 0) || 0;
         return type;
     },
-    render(type) {
-        console.log(type);
+    render(type) {  
         if (!info.name || info.name.replace(/\s/g, '') === '') {
             type = 'form';
         }
+        console.log(type);
         switch (type) {
             case 'form':   
                 form.init();
