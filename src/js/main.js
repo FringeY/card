@@ -44,10 +44,10 @@ const form = {
         for (let key in info) {
             let input = document.querySelector(`[name=${key}]`);
             info[key] = input.value;
-            input.addEventListener('change', function () {
+            input.onchange = function () {
                 info[key] = this.value;
                 console.log(info);
-            });
+            };
         };
     },
     render() {
@@ -117,7 +117,7 @@ const route = {
     parse() {
         let hash = location.hash;
         let type = (hash.match(/type=(?:(\w+)&)?/) ? location.hash.match(/type=(?:(\w+)&)?/)[1] : 'form') || 'form';
-        info.name = (hash.match(/name=(?:(\w+)&)?/) ? location.hash.match(/name=(?:(\w+)&)?/)[1] : '') || '';
+        info.name = (hash.match(/name=(?:(\w+)&)?/) ? location.hash.match(/name=(?:([\w\u4e00-\u9fa5]+)&)?/)[1] : '') || '';
         info.company = (hash.match(/company=(?:(\w+)&)?/) ? location.hash.match(/company=(?:(\w+)&)?/)[1] : 0) || 0;
         info.job = (hash.match(/job=(?:(\w+)&)?/) ? location.hash.match(/job=(?:(\w+)&)?/)[1] : 0) || 0;
         return type;
@@ -145,5 +145,4 @@ const route = {
 window.onload = function () {
     FastClick.attach(document.body);
     route.init();
-    
 };
