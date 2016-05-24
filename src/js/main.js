@@ -96,11 +96,35 @@ const result = {
             let canvas = document.getElementById('canvas');
             let ctx = canvas.getContext('2d');
             let date = new Date();
+            let dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`;
             ctx.drawImage(img, 0, 0);
-            ctx.font = "22px no-serif";
-            ctx.fillText(info.name, 254, 250);
-            ctx.fillText(jobs[info.job], 254, 300);
-            ctx.fillText(`${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`, 254, 348);
+            if (info.company == 0) {
+                ctx.font = '22px sans-serif';
+                ctx.fillStyle = "black";
+                ctx.fillText(info.name, 254, 250);
+                ctx.fillText(jobs[info.job], 254, 300);
+                ctx.fillText(dateString, 254, 348);
+            } else if (info.company == 1) {
+                ctx.font = '20px sans-serif';
+                ctx.fillStyle = "orange";
+                ctx.fillText(info.name, 454, 205);
+                ctx.fillText(jobs[info.job], 454, 245);
+                ctx.fillText(dateString, 454, 290);
+            } else if (info.company == 2) {
+                ctx.font = '20px sans-serif';
+                ctx.fillStyle = "black";
+                ctx.fillText(info.name, 254, 245);
+                ctx.fillText(jobs[info.job], 254, 284);
+                ctx.fillText(dateString, 254, 324);
+            } else if (info.company == 3) {
+                ctx.font = '18px sans-serif';
+                ctx.fillStyle = "white";
+                ctx.fillText(info.name, 254, 298);
+                ctx.fillText(jobs[info.job], 254, 328);
+                ctx.fillText(dateString, 254, 360);
+            } else {
+                return false;
+            }
             document.getElementById('card').src = canvas.toDataURL("image/png");
         };  
     }
