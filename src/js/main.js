@@ -18,8 +18,8 @@ const jobs = {
     2: '市场部实习生',
     3: '前端开发实习生',
     4: '后端开发实习生',
-    4: '移动开发实习生',
-    5: '视觉设计实习生'
+    5: '移动开发实习生',
+    6: '视觉设计实习生'
 };
 const images = {
     0: 'public/build/img/tencent.png',
@@ -108,9 +108,9 @@ const result = {
             } else if (info.company == 1) {
                 ctx.font = '20px sans-serif';
                 ctx.fillStyle = "orange";
-                ctx.fillText(info.name, 452, 204);
-                ctx.fillText(jobs[info.job], 452, 246);
-                ctx.fillText(dateString, 452, 289);
+                ctx.fillText(info.name, 450, 205);
+                ctx.fillText(jobs[info.job], 450, 246);
+                ctx.fillText(dateString, 450, 288);
             } else if (info.company == 2) {
                 ctx.font = '20px sans-serif';
                 ctx.fillStyle = "black";
