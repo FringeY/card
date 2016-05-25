@@ -13,11 +13,12 @@ const companys = {
     3: '网易'
 };
 const jobs = {
-    0: '产品实习经理',
+    0: '产品实习生',
     1: '运营实习生',
     2: '市场部实习生',
-    3: '前端实习生',
-    4: '移动开发工程师',
+    3: '前端开发实习生',
+    4: '后端开发实习生',
+    4: '移动开发实习生',
     5: '视觉设计实习生'
 };
 const images = {
@@ -107,9 +108,9 @@ const result = {
             } else if (info.company == 1) {
                 ctx.font = '20px sans-serif';
                 ctx.fillStyle = "orange";
-                ctx.fillText(info.name, 454, 205);
-                ctx.fillText(jobs[info.job], 454, 245);
-                ctx.fillText(dateString, 454, 290);
+                ctx.fillText(info.name, 452, 204);
+                ctx.fillText(jobs[info.job], 452, 246);
+                ctx.fillText(dateString, 452, 289);
             } else if (info.company == 2) {
                 ctx.font = '20px sans-serif';
                 ctx.fillStyle = "black";
