@@ -170,4 +170,5 @@ const route = {
 window.onload = function () {
     FastClick.attach(document.body);
     route.init();
+    console.log('powered by yaosui, https://www.yaosui.me');
 };
