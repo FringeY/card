@@ -100,19 +100,19 @@ const result = {
             let dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`;
             ctx.drawImage(img, 0, 0);
             if (info.company == 0) {
-                ctx.font = '22px sans-serif';
+                ctx.font = '20px sans-serif';
                 ctx.fillStyle = "black";
                 ctx.fillText(info.name, 254, 250);
                 ctx.fillText(jobs[info.job], 254, 300);
                 ctx.fillText(dateString, 254, 347);
             } else if (info.company == 1) {
-                ctx.font = '20px sans-serif';
-                ctx.fillStyle = "orange";
+                ctx.font = '16px sans-serif';
+                ctx.fillStyle = "#fd8f35";
                 ctx.fillText(info.name, 446, 204);
-                ctx.fillText(jobs[info.job], 446, 246);
-                ctx.fillText(dateString, 446, 287);
+                ctx.fillText(jobs[info.job], 446, 247);
+                ctx.fillText(dateString, 446, 288);
             } else if (info.company == 2) {
-                ctx.font = '20px sans-serif';
+                ctx.font = '18px sans-serif';
                 ctx.fillStyle = "black";
                 ctx.fillText(info.name, 254, 245);
                 ctx.fillText(jobs[info.job], 254, 284);
