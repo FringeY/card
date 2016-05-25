@@ -104,13 +104,13 @@ const result = {
                 ctx.fillStyle = "black";
                 ctx.fillText(info.name, 254, 250);
                 ctx.fillText(jobs[info.job], 254, 300);
-                ctx.fillText(dateString, 254, 348);
+                ctx.fillText(dateString, 254, 347);
             } else if (info.company == 1) {
                 ctx.font = '20px sans-serif';
                 ctx.fillStyle = "orange";
-                ctx.fillText(info.name, 450, 205);
-                ctx.fillText(jobs[info.job], 450, 246);
-                ctx.fillText(dateString, 450, 288);
+                ctx.fillText(info.name, 446, 204);
+                ctx.fillText(jobs[info.job], 446, 246);
+                ctx.fillText(dateString, 446, 287);
             } else if (info.company == 2) {
                 ctx.font = '20px sans-serif';
                 ctx.fillStyle = "black";
